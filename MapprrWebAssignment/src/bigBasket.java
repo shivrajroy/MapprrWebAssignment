@@ -70,8 +70,8 @@ public class bigBasket {
 			WebElement varSec = driver.findElement(By.xpath(varSecond));
 			if (varSec.isDisplayed()) {
 				driver.findElement(By.xpath(varSecond)).click();
-				writeExcelByRow("D:\\Workspace\\Maprrr.xls", "Sheet1", "variant", varSecondText, i);
-				writeExcelByRow("D:\\Workspace\\Maprrr.xls", "Sheet1", "selling_price", spSec, i);
+				writeExcelByRow("C:\\Users\\shivr\\git\\MapprrWebAssignment\\MapprrWebAssignment\\src\\Maprrr.xls", "Sheet1", "variant", varSecondText, i);
+				writeExcelByRow("C:\\Users\\shivr\\git\\MapprrWebAssignment\\MapprrWebAssignment\\src\\Maprrr.xls", "Sheet1", "selling_price", spSec, i);
 
 			} else {
 				String varFirst = "((//button[@class='btn btn-default dropdown-toggle form-control'])[1]//following-sibling::ul/li/a)[1]";
@@ -80,13 +80,13 @@ public class bigBasket {
 			String prodNamedynamicXpath = "(//h6[@ng-bind='vm.selectedProduct.p_brand'])[" + i + "]";
 			String productName = driver.findElement(By.xpath(prodNamedynamicXpath)).getText();
 			System.out.println(productName);
-			writeExcelByRow("D:\\Workspace\\Maprrr.xls", "Sheet1", "product_name", productName, i);
+			writeExcelByRow("C:\\Users\\shivr\\git\\MapprrWebAssignment\\MapprrWebAssignment\\src\\Maprrr.xls", "Sheet1", "product_name", productName, i);
 
 			String prodTypeDynamicXpath = "(//h6[@ng-bind='vm.selectedProduct.p_brand'])[" + i
 					+ "]//following-sibling::a";
 			String prodType = driver.findElement(By.xpath(prodTypeDynamicXpath)).getText();
 			System.out.println(prodType);
-			writeExcelByRow("D:\\Workspace\\Maprrr.xls", "Sheet1", "product_type", prodType, i);
+			writeExcelByRow("C:\\Users\\shivr\\git\\MapprrWebAssignment\\MapprrWebAssignment\\src\\Maprrr.xls", "Sheet1", "product_type", prodType, i);
 		}
 
 		System.out.println("Testcase Passed");
